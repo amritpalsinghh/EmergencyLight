@@ -84,7 +84,38 @@ The Emergency Light Unit includes:
 * Fuse protection on input side
 
 ---
+## Serial Debugging 
 
+05/03/40 | 20:00:16 | | S:1 | SV: 12.14|BV:12.06| Ch: +024| Ch:1|DM:0|DL:0[ T:0|CL:0| HL:0 | BBH:0[ 2HFLT|S00:00 A02:00 E00:00| | BØ:12.06,B1:12.06, dvdt: 00.00/1= 00.00| lvb=0, lvbS=0 
+BF: 00000 LC:1<LF> 
+<LF: 
+05/03/40 | 20:00:16 | S: 1 |SV: 12.14|BV: 12.06 |Ch: +024|Ch: 1| DM: 0|DL: 0[ T:0 |CL:0| HL: 0| BBH: 0[ 2HELT | 500:00 A02:00 E00:00 |B0:12.06, B1:12.06, dvdt: 00.00/1= 00.00 |lvb=0, lvbS=0 
+BF: 00000 LC:1<LF> 
+<LF> 
+05/03/40 |20:00:16|S:1|SV: 12.14|BV: 12.06 | Ch: +024 |ch: 1 |DM: 0|DL : 0[ T : 0 |CL:0|HL:0|BH:0[ 2HFLT|500:00 A02:00 00:00|B0:12.06,81:12.06,dvdt: 00.00/1= 00.00|1vb=0,lvbS=0 
+|BF: 00000 LC:1<LF> 
+‹LF 
+05/03/40 | 20:00:16 | | S:1| SV:12.14|BV:12.06 | Ch: +024| Ch:1| DM:0|DL:0[ T:0|CL:0| HL:0 | BBH:0[ 2HFLT |S00:00 A02:00 E00:00| | B0:12.06,B1:12.06, dvdt: 00.00/1= 00.00| lvb=0, lvbS=0 
+BF: 00000 LC:1<LF> 
+<LF> 
+05/03/40 | 20:00:16 | | S:1 | SV:12.14|BV:12.06 | Ch: +024| Ch:1|DM:0|DL:0[ T:0|CL:0|HL:0 | BBH:0[ 2HFLT |S00:00 A02:00 E00:00| | BØ:12.06,B1:12.06, dvdt: 00.00/1= 00.00| lvb=0, 1vbS=0 
+|BF: 00000 LC:1<LF> 
+<LF> 
+05/03/40|20:00:16|S:1|SV: 12.14|BV: 12.06 |Ch: +024|Ch:1|DM:0|DL:0[ T:0|CL:0|HL:0|BH:0[ 2HFLT|500:00 A02:00 E00:00|B0:12.06,81:12.06,dvdt: 00.00/1= 00.00|1vb=0,lvbS=0 
+BF: 00000 LC:1<LF> 
+<LF 
+05/03/40 | 20:00:16 | S:1 | SV: 12.14|BV: 12.05 | Ch: +024|Ch: 1| DM: 0|DL: 0[ T:0| CL: 0| HL: 0| BH: 0[ 2HELT| 500:00 A02:00 E00:00|B0:12.06,81:12.05, dvdt: - 00.01/1= - 00.01|lvb=0,lvbS=0 
+BF: 00000 LC:1<LF> 
+
+where 
+     SV - Supply voltae
+     S - Supply Enable 110V 
+     BV - Current Battery voltage 
+     CH  - Charging current 
+     DM - Dummy load enable or dissable to discharge the Battery in descharge cycle at 1st and 16th of each mounth
+     HL == High lux ...as light start glow will glow for 2 houres at high lux and then reamin at low lux as per spec
+     Dv/Dt - rate ofcharge and discharge  if abnormally high hen declair battery is not healthy
+     
 ## Mechanical Construction
 
 * Rugged railway-grade construction
